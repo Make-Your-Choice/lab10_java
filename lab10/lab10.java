@@ -2,7 +2,7 @@ import java.util.Scanner;
 	
 public class lab10 { //основной класс
 
-public static boolean isParsable(String s) {
+public static boolean isParsable(String s) { //функция для проверки возможности преобразования строки в число
     try {
 			Integer.parseInt(s);
 		}
@@ -34,18 +34,18 @@ public static boolean isParsable(String s) {
 		System.out.printf("Input genre: ");
 		s3 = in.next();
 		r = 0;
-		while(r == 0)
+		while(r == 0) //проверка корректности ввода цены
 		{
 			System.out.printf("Input price: ");
 			r = 1;
 			x1 = in.next();
 			try {
-				if (!isParsable(x1))
+				if (!isParsable(x1)) //если цена - цифра
 					throw new exceptions(1);
 				x = Integer.parseInt(x1);
 			}
 			catch (exceptions e) {
-				System.out.printf("Incorrect value\n");
+				System.out.printf("Incorrect value\n"); //сообщение об ошибке
 				r = 0;
 			}
 			if (r==1)
@@ -54,18 +54,18 @@ public static boolean isParsable(String s) {
 			}
 		}
 		r = 0;
-		while(r == 0)
+		while(r == 0) //проверка корректности ввода количества на складе
 		{
 			System.out.printf("Input number in stock: ");
 			r = 1;
 			y1 = in.next();
 			try {
-				if (!isParsable(y1))
+				if (!isParsable(y1)) //если количество на складе - цифра
 					throw new exceptions(1);
 				y = Integer.parseInt(y1);
 			}
 			catch (exceptions e) {
-				System.out.printf("Incorrect value\n");
+				System.out.printf("Incorrect value\n"); //сообщение об ошибке
 				r = 0;
 			}
 			if (r==1)
@@ -74,18 +74,18 @@ public static boolean isParsable(String s) {
 			}
 		}
 		r = 0;
-		while(r == 0)
+		while(r == 0) //проверка корректности ввода популярности
 		{
 			System.out.printf("Input popularity: ");
 			r = 1;
 			z1 = in.next();
 			try {
-				if (!isParsable(z1))
+				if (!isParsable(z1)) //если популярность - цифра
 					throw new exceptions(1);
 				z = Integer.parseInt(z1);
 			}
 			catch (exceptions e) {
-				System.out.printf("Incorrect value\n");
+				System.out.printf("Incorrect value\n"); //сообщение об ошибке
 				r = 0;
 			}
 			if (r==1)
